@@ -10,28 +10,26 @@ interface RotationIndicatorProps {
 
 const RotationIndicator: React.FC<RotationIndicatorProps> = ({ pitch, roll, yaw }) => {
   return (
-    <div className="rotation-indicator">
-      <div className="circle-container">
-        <div className="circle-item">
-          <div className="circle" style={{ transform: `rotate(${pitch * 3.6}deg)` }}>
+    <div className="rotation-container">
+        <div className="circle">
+          <div className="circle-direction " style={{ transform: `rotate(${pitch * 3.6}deg)` }}>
             Pitch
           </div>
           <div className="percentage">{pitch}%</div>
         </div>
-        <div className="circle-item">
-          <div className="circle" style={{ transform: `rotate(${roll * 3.6}deg)` }}>
+        <div className="circle">
+          <div className="circle-direction " style={{ transform: `rotate(${roll * 3.6}deg)` }}>
             Roll
           </div>
           <div className="percentage">{roll}%</div>
         </div>
-        <div className="circle-item">
-          <div className="circle" style={{ transform: `rotate(${yaw * 3.6}deg)` }}>
+        <div className="circle">
+          <div className="circle-direction " style={{ transform: `rotate(${yaw * 3.6}deg)` }}>
             Yaw
           </div>
           <div className="percentage">{yaw}%</div>
         </div>
       </div>
-    </div>
   );
 };
 

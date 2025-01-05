@@ -1,0 +1,50 @@
+.sensorbox {
+    height: 13vh;
+    width: 40%;
+    border-radius: 15px;
+    margin-top: 0.2%;
+    margin-bottom: 0.1%;
+    background: #f0f0f0;
+    position: relative;
+}
+
+/* .SensorContainer {
+    width: 50vw;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    position: fixed;
+    top: 10.5rem;
+    left: 3.3rem;
+}  */
+.SensorContainer {
+    width: 119vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-start;  
+    flex-wrap: nowrap;  
+    position: fixed;
+    top: 10.5rem;
+    left: 6.2rem;
+}
+
+.sensor-values-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;  /* Ensure the values are in one row */
+    flex-wrap: nowrap;    /* Prevent wrapping */
+}
+
+.sensor-value {
+    margin-right: 10px;  /* Adjust the spacing between values */
+    font-size: 1rem;
+    position: relative;
+}
+
+.value-number {
+    font-size: 1rem;
+}

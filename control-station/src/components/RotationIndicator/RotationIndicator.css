@@ -1,6 +1,5 @@
-.rotation-indicator {
+.rotation-container {
   display: flex;
-  justify-content: center;
   padding: 10px 20px;
   background-color: #f0f0f0;
   border-radius: 1rem;
@@ -8,22 +7,24 @@
   position: fixed;
   top: 2.5rem;
   left: 6.2rem;
-  width: 35%;
+  width: 44%;
+  justify-content: space-around;
 }
 
-.circle-container {
+/* .circle-container {
   display: flex;
   justify-content: space-around;
   width: 100%;
-}
+} */
 
-.circle-item {
+.circle {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: black;
 }
 
-.circle {
+.circle-direction {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;

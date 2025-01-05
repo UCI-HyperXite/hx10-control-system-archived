@@ -1,0 +1,41 @@
+.speed-dist-box {
+    height: 7vh;
+    width: 35%;
+    border-radius: 15px;
+    margin-top: 0.2%;
+    margin-bottom: 0.1%;
+    background: #f0f0f0;
+    position: relative;
+}
+
+
+.SpeedDistContainer {
+    width: 60vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    position: fixed;
+    top: 33.3rem;
+    left: 1.1rem;
+}  
+
+.speed-dist-content {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.speed-dist-title {
+    font-weight: bold; 
+    margin-right: 8px;  
+}
+
+.speed-dist-value {
+    font-weight: normal;
+}
+
+

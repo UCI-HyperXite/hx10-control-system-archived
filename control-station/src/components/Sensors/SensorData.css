@@ -3,7 +3,6 @@
 	flex-grow: 1;
 }
 .camera {
-	/* height: 45%; */
 	width: 40vw;
 	height: 38vh;
 	background-color: rgb(255, 255, 255);
@@ -18,14 +17,14 @@
 }
 
 .console {
-	width: 40vw; /* You can adjust the width */
-	height: 38vh; /* Adjust height as needed */
+	width: 40vw; 
+	height: 38vh; 
 	background-color: rgb(255, 255, 255);
 	border-radius: 20px;
-	margin: 0; /* Remove margin to ensure the console sticks to the corner */
-	position: absolute; /* This positions the console absolutely within the parent */
-	bottom: 15%; /* Distance from the bottom of the parent */
-	right: 2.5%;  /* Distance from the right side of the parent */
+	margin: 0; 
+	position: absolute; 
+	bottom: 15%; 
+	right: 2.5%;  
 	border: 1px solid black;
 	overflow-y: auto;
 }

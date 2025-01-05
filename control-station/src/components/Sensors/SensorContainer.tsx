@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import SensorBox from "./SensorBox";
-import StatusIndicator from "@/components/StatusIndicator/StatusIndicator";
 import SpeedDistBox from "./SpeedDistBox";
 import RotationIndicator from "@/components/RotationIndicator/RotationIndicator";
 function SensorContainer() {

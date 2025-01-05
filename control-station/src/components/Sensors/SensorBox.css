@@ -8,17 +8,6 @@
     position: relative;
 }
 
-/* .SensorContainer {
-    width: 50vw;
-    height: auto;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    flex-basis: 50%;
-    position: fixed;
-    top: 10.5rem;
-    left: 3.3rem;
-}  */
 .SensorContainer {
     width: 119vw;
     height: auto;
@@ -35,12 +24,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;  /* Ensure the values are in one row */
-    flex-wrap: nowrap;    /* Prevent wrapping */
+    flex-direction: row;  
+    flex-wrap: nowrap;    
 }
 
 .sensor-value {
-    margin-right: 10px;  /* Adjust the spacing between values */
+    margin-right: 10px;  
     font-size: 1rem;
     position: relative;
 }

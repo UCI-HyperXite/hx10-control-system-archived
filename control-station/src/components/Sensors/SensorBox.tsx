@@ -10,7 +10,7 @@ interface SensorBoxProps {
 function SensorBox({ title, sensor_location, value, unit }: SensorBoxProps) {
     return (
         <div className="sensorbox">
-            <h3 style={{ textAlign: "center", height: "1%", fontSize: "90%" }}>{title}</h3>
+            <h3 style={{ textAlign: "center", height: "1%", fontSize: "90%"}}>{title}</h3>
             
             <div className="sensor-values-wrapper">
                 {value.map((val, valindex) => (

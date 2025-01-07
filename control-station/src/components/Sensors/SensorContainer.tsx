@@ -17,17 +17,17 @@ function SensorContainer() {
     const [roll, setRoll] = useState(50);
     const [yaw, setYaw] = useState(75);
 	return (
-		<div className="SensorContainer">
+        <div className="SensorContainer">
             <RotationIndicator pitch={pitch} roll={roll} yaw={yaw} />
             <SensorBox title="Temperature" sensor_location={TempLocation} value={Temperature} unit="°C" />
             <SensorBox title="Pressure" sensor_location={PressureLocation} value={Pressure} unit="PSI"/>
             <SensorBox title="Voltage" sensor_location={VoltageLocation} value={Voltage} unit="V"/>
-			<SensorBox title="Current" sensor_location={CurrentLocation} value={Current} unit="A"/>
-			<div className = "SpeedDistContainer">
+            <SensorBox title="Current" sensor_location={CurrentLocation} value={Current} unit="A"/>
+            <div className = "SpeedDistContainer">
                 <SpeedDistBox title="Speed" value={Speed} unit="km/h"/>
                 <SpeedDistBox title="Distance" value={Distance} unit="km/h"/>
             </div>
-		</div>
+        </div>
         
         
         

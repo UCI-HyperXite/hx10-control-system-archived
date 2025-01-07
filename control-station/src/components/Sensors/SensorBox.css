@@ -1,11 +1,12 @@
 .sensorbox {
-    height: 13vh;
+    height: 10vh;
     width: 40%;
     border-radius: 15px;
     margin-top: 0.2%;
     margin-bottom: 0.1%;
     background: #f0f0f0;
     position: relative;
+    color: black;
 }
 
 .SensorContainer {
@@ -16,7 +17,7 @@
     justify-content: flex-start;  
     flex-wrap: nowrap;  
     position: fixed;
-    top: 10.5rem;
+    top: 17.5rem;
     left: 6.2rem;
 }
 
@@ -32,8 +33,23 @@
     margin-right: 10px;  
     font-size: 1rem;
     position: relative;
+    color: black;
 }
 
 .value-number {
     font-size: 1rem;
+    color: black;
 }
+
+.sensor-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: move;
+  }
+  

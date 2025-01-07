@@ -1,6 +1,7 @@
 .sensordata {
 	display: flex;
 	flex-grow: 1;
+	color: black;
 }
 .camera {
 	width: 40vw;

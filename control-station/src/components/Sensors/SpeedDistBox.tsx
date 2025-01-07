@@ -13,7 +13,6 @@ function SpeedDistBox({ title, value, unit }: SpeedDistProps) {
                 <span className="speed-dist-title">{title}</span>
                 <span className="speed-dist-value">{value}{unit}</span>
             </div>
-            
         </div>
     );
 }

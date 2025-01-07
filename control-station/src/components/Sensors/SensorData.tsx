@@ -5,13 +5,13 @@ import SensorContainer from "@/components/Sensors/SensorContainer";
 import "./SensorData.css";
 
 function SensorData() {
-	return (
-		<div className="sensordata">
-			<SensorContainer />
-            <Camera/>
-            <Console/>
-		</div>
-	);
+  return (
+    <div className="sensordata">
+      <SensorContainer />
+      {/* <Camera />
+      <Console /> */}
+    </div>
+  );
 }
 
 export default SensorData;

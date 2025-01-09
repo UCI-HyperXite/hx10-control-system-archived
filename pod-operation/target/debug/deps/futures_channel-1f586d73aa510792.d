@@ -1,0 +1,9 @@
+C:\Users\kimja\OneDrive\Desktop\UCI\Senior Design Projects\HyperXite\hx10-control-system\pod-operation\target\debug\deps\libfutures_channel-1f586d73aa510792.rmeta: C:\Users\kimja\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.31\src/lib.rs C:\Users\kimja\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.31\src\lock.rs C:\Users\kimja\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.31\src\mpsc\mod.rs C:\Users\kimja\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.31\src\mpsc\queue.rs C:\Users\kimja\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.31\src\oneshot.rs
+
+C:\Users\kimja\OneDrive\Desktop\UCI\Senior Design Projects\HyperXite\hx10-control-system\pod-operation\target\debug\deps\futures_channel-1f586d73aa510792.d: C:\Users\kimja\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.31\src/lib.rs C:\Users\kimja\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.31\src\lock.rs C:\Users\kimja\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.31\src\mpsc\mod.rs C:\Users\kimja\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.31\src\mpsc\queue.rs C:\Users\kimja\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.31\src\oneshot.rs
+
+C:\Users\kimja\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.31\src/lib.rs:
+C:\Users\kimja\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.31\src\lock.rs:
+C:\Users\kimja\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.31\src\mpsc\mod.rs:
+C:\Users\kimja\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.31\src\mpsc\queue.rs:
+C:\Users\kimja\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-channel-0.3.31\src\oneshot.rs:

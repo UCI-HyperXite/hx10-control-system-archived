@@ -7,3 +7,6 @@ edition = "2021"
 axum = "0.7.7"
 tokio = { version = "1.41.1", features = ["full"] }
 socketioxide = "0.15.1"
+rppal = {version = "0.22.1", features = ["hal"], optional = true}
+i2cdev = "0.6.1"
+vl53l0x = "1.0.1"

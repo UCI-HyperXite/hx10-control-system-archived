@@ -1,6 +1,10 @@
 use axum::{routing::get, Router};
 use socketioxide::SocketIo;
 
+//mod components;
+
+use crate::components::yaw::Yaw;
+
 #[tokio::main]
 async fn main() {
 	// Make a layer for Socket connection
@@ -14,4 +18,8 @@ async fn main() {
 	let listener = tokio::net::TcpListener::bind("0.0.0.0:5000").await.unwrap();
 
 	axum::serve(listener, app).await.unwrap();
+
+
+	let yaw: Yaw = Yaw::new();
+	tokio::spawn(demo::read_distance(yaw));
 }

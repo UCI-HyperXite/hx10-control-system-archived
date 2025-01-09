@@ -1,5 +1,5 @@
 use {
-    vl53l0x::VL53L0x,
+    vl53l0x::VL53L0x, // adafruit sensor name 
     rppal::{hal::Delay, i2c::I2c},
 };
 

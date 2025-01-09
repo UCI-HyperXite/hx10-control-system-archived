@@ -1,6 +1,7 @@
 use {
-    vl53l0x::VL53L0x, // adafruit sensor name 
-    rppal::{hal::Delay, i2c::I2c},
+    vl53l0x::VL53L0x,
+    rppal::{i2c::I2c},
+    // serde::Serialize,
 };
 
 
@@ -8,15 +9,16 @@ pub struct Yaw{
     yaw: VL53L0x<I2c>,
 }
 
+// #[derive(Serialize)]
 pub struct Distance{
-    pub distance: i32,
+    pub distance: u16,
 }
 
-pub impl Yaw{
+impl Yaw{
     pub fn new() -> Self{
         let i2c = I2c::new().unwrap();
-        let mut yaw = VL53L0x::new(i2c);
-        yaw.init(&mut Delay::new()).unwrap();
+        // let error = "REASON";
+        let mut yaw = VL53L0x::new(i2c).unwrap();
 
         Yaw {yaw}
     }

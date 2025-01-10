@@ -1,7 +1,6 @@
 use {
     vl53l0x::VL53L0x,
     rppal::{i2c::I2c},
-    // serde::Serialize,
 };
 
 
@@ -9,7 +8,6 @@ pub struct Yaw {
     yaw: VL53L0x<I2c>,
 }
 
-// #[derive(Serialize)]
 pub struct Distance {
     pub distance: u16,
 }
@@ -21,14 +19,14 @@ impl Yaw {
         let mut yaw = VL53L0x::new(i2c).unwrap();
     
         yaw.set_measurement_timing_budget(0).unwrap(); // Set timing budget
-        yaw.start_continuous(0).unwrap(); // Start continuous mode with 100ms period
+        yaw.start_continuous(0).unwrap(); // Start continuous mode with 0ms delay
     
         Yaw { yaw }
     }    
     
-    /// Read curr distance in continuous mode
+    /// Read current distance in continuous mode
     pub fn read_distance(&mut self) -> Result<Distance, String> {
-        print!("Reading distance...", );
+        print!("Reading distance...");
         match self.yaw.read_range_continuous_millimeters_blocking() {
             Ok(distance) => return Ok(Distance { distance }),
             Err(e) => {

@@ -22,7 +22,7 @@ async fn main() {
     });
 
     let yaw = Yaw::new();
-    let sensor_task = tokio::spawn(test::read_distance(yaw));
+    let sensor_task = tokio::spawn(test::read_yaw(yaw));
 
     tokio::select! {
         _ = server_task => {},

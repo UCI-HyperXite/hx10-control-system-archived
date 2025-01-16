@@ -1,7 +1,7 @@
 use axum::{routing::get, Router};
 use socketioxide::SocketIo;
 
-use crate::components::yaw::Yaw;
+use crate::components::yaw::*;
 
 mod components;
 mod test;

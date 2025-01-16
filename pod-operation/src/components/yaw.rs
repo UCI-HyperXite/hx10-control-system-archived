@@ -16,13 +16,13 @@ pub struct Distance {
 impl Yaw {
     /// Initialize the sensor for continuous reading
     pub fn new() -> Self {
-        let front_i2c: I2c = I2c::new().unwrap();
-        let center_i2c: I2c = I2c::new().unwrap();
-        
-        let mut front = VL53L0x::new(front_i2c).unwrap();
-        front.set_address(0x20);
-        let mut center = VL53L0x::new(center_i2c).unwrap();
-        center.set_address(0x21);
+        let i2c: I2c = I2c::new().unwrap();
+        let i2c2 = i2c.clone();
+
+        let mut front = VL53L0x::new(i2c).unwrap();
+        front.set_address(0x21);
+        let mut center = VL53L0x::new(i2c2).unwrap();
+        center.set_address(0x20);
     
         front.set_measurement_timing_budget(0).unwrap(); // Set timing budget
         center.set_measurement_timing_budget(0).unwrap(); // Set timing budget
@@ -41,5 +41,12 @@ impl Yaw {
 
         Ok (Distance {yaw})
         
+        
     }      
+}
+
+impl Clone for Yaw {
+    fn clone(&self) -> Self {
+        *self
+    }
 }

@@ -2,6 +2,8 @@ use axum::{routing::get, Router};
 use socketioxide::SocketIo;
 
 use crate::components::yaw::*;
+use crate::components::front_tof::*;
+use crate::components::center_tof::*;
 
 mod components;
 mod test;

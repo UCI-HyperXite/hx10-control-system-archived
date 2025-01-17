@@ -21,7 +21,7 @@ impl Center_Tof {
         center.set_measurement_timing_budget(0).unwrap();
         center.start_continuous(0).unwrap();
 
-        Center_Tof { center }
+        Center_Tof { center_tof: center }
     }
 
     pub fn read_distance(&mut self) -> Result<Distance, String> {

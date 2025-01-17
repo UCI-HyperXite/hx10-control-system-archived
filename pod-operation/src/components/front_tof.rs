@@ -21,7 +21,7 @@ impl Front_Tof {
         front.set_measurement_timing_budget(0).unwrap();
         front.start_continuous(0).unwrap();
 
-        Front_Tof { front }
+        Front_Tof { front_tof: front }
     }
 
     pub fn read_distance(&mut self) -> Result<Distance, String> {

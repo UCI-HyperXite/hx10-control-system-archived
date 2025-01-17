@@ -21,11 +21,15 @@ async fn main() {
         axum::serve(listener, app).await.unwrap();
     });
 
-    let yaw = Yaw::new();
-    let sensor_task = tokio::spawn(test::read_yaw(yaw));
+    let front_tof = Front_Tof::new();
+    let sensor_task_front = tokio::spawn(test::read_front_tof(front_tof));
+
+    let center_tof = Center_Tof::new();
+    let sensor_task_center = tokio::spawn(test::read_center_tof(center_tof));
 
     tokio::select! {
         _ = server_task => {},
-        _ = sensor_task => {},
+        _ = sensor_task_front => {},
+        _ = sensor_task_center => {},
     }
 }

@@ -1,52 +1,43 @@
 use {
     vl53l0x::VL53L0x,
     rppal::i2c::I2c,
+    components::front_tof::Front_Tof,
+    components::center_tof::Center_Tof,
+    tokio::task::JoinHandle,
 };
 
 
 pub struct Yaw {
-    front_tof: VL53L0x<I2c>,
-    center_tof: VL53L0x<I2c>,
+    front_tof: Front_Tof,
+    center_tof: Center_Tof,
 }
 
-pub struct Distance {
+pub struct Angle {
     pub yaw: f64,
 }
 
 impl Yaw {
     /// Initialize the sensor for continuous reading
-    pub fn new() -> Self {
-        let i2c: I2c = I2c::new().unwrap();
-        let i2c2 = i2c.clone();
-
-        let mut front = VL53L0x::new(i2c).unwrap();
-        front.set_address(0x21);
-        let mut center = VL53L0x::new(i2c2).unwrap();
-        center.set_address(0x20);
+    pub fn new(front_tof: Front_Tof, center_tof: Center_Tof) -> Self {
     
-        front.set_measurement_timing_budget(0).unwrap(); // Set timing budget
-        center.set_measurement_timing_budget(0).unwrap(); // Set timing budget
-        front.start_continuous(0).unwrap(); // Start continuous mode with 0ms delay
-        center.start_continuous(0).unwrap(); // Start continuous mode with 0ms delay
-    
-        Yaw { front_tof: front, center_tof: center }
+        Yaw { front_tof, center_tof }
     }    
     
     /// Read current distance in continuous mode
-    pub fn read_yaw(&mut self) -> Result<Distance, String> {
-        print!("Reading the distance & yaw");
-        let front_distance = self.front_tof.read_range_continuous_millimeters_blocking().unwrap();
-        let center_distance = self.center_tof.read_range_continuous_millimeters_blocking().unwrap();
+    pub fn read_yaw(&mut self) -> Result<Angle, String> {
+        print!("Calculating yaw");
+
+        let sensor_task_front: JoinHandle<Result<Distance, String>> = tokio::spawn(async { self.front_tof.read_distance() });
+        let sensor_task_center: JoinHandle<Result<Distance, String>> = tokio::spawn(async { self.center_tof.read_distance() });
+
+        let front_distance = sensor_task_front.await.unwrap().unwrap().distance;
+        let center_distance = sensor_task_center.await.unwrap().unwrap().distance;
+
+
+
         let yaw: f64 = (((center_distance as f64) - (front_distance as f64)) / 20.0).atan();
 
-        Ok (Distance {yaw})
-        
+        Ok (Angle {yaw})
         
     }      
-}
-
-impl Clone for Yaw {
-    fn clone(&self) -> Self {
-        *self
-    }
 }

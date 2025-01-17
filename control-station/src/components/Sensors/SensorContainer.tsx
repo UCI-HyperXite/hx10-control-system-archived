@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import SensorBox from "./SensorBox";
 import SpeedDistBox from "./SpeedDistBox";
 import RotationIndicator from "@/components/RotationIndicator/RotationIndicator";
+import "./SensorContainer.css"; // Adjust this path according to your structure
 function SensorContainer() {
   const [TempLocation, setTempLoc] = useState(["loc1", "loc2", "loc3"]);
   const [Temperature, setTemp] = useState([25, 50, 75]);

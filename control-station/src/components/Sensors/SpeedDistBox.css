@@ -1,57 +1,4 @@
-/* .speed-dist-box {
-    height: 15vh;
-    width: 40%;
-    border-radius: 15px;
-    margin-top: 0.2%;
-    margin-bottom: 0.1%;
-    background: #f0f0f0;
-    position: relative;
-    color: black;
-}
-
-
-.SpeedDistContainer {
-    width: 54.8vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
-    position: fixed;
-    top:10.8rem;
-    left: 1.7%
-}  
-
-.speed-dist-content {
-    margin-top: 5%;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-}
-
-.speed-dist-title {
-    font-weight: bold; 
-    margin-right: 8px;  
-}
-
-.speed-dist-value {
-    font-weight: normal;
-}
-
- */
-
- .speed-dist-box {
-    /* display: flex; */
-    /* height: 10%;
-    width: 40%;
-    background: #f0f0f0;
-    position: relative;
-    color: black; */
-
-    /* display: flex;
-	flex-grow: 1;
-	color: black;
-    background: #f0f0f0;
-    width: 40%; */
+.speed-dist-box {
     height: 10vh;
     width: 40%;
     border-radius: 15px;
@@ -82,7 +29,8 @@
 
 .speed-dist-title {
     font-weight: bold; 
-    margin-right: 8px;  
+    margin-right: 8px; 
+    font-size: 110%; 
 }
 
 .speed-dist-value {

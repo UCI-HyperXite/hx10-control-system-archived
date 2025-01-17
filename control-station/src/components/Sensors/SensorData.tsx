@@ -8,8 +8,8 @@ function SensorData() {
   return (
     <div className="sensordata">
       <SensorContainer />
-      {/* <Camera />
-      <Console /> */}
+      <Camera />
+      <Console />
     </div>
   );
 }

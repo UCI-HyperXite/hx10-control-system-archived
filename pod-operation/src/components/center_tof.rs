@@ -16,7 +16,7 @@ impl Center_Tof {
         let i2c: I2c = I2c::new().unwrap();
 
         let mut center = VL53L0x::new(i2c).unwrap();
-        center.set_address(0x21);
+        // center.set_address(0x21);
 
         center.set_measurement_timing_budget(0).unwrap();
         center.start_continuous(0).unwrap();

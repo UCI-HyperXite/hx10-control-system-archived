@@ -3,8 +3,15 @@ use {
     rppal::i2c::I2c,
 };
 
+use crate::components::gpio::InputPin;
+use rppal::gpio::{Gpio, InputPin};
+use tracing::debug;
+use std::{thread, time::Duration};
+
+
 pub struct Front_Tof {
     front_tof: VL53L0x<I2c>,
+    pin: InputPin,
 }
 
 pub struct Distance {
@@ -16,12 +23,12 @@ impl Front_Tof {
         let i2c: I2c = I2c::new().unwrap();
 
         let mut front = VL53L0x::new(i2c).unwrap();
-        front.set_address(0x20);
+        front.set_address(0x30);
 
         front.set_measurement_timing_budget(0).unwrap();
         front.start_continuous(0).unwrap();
 
-        Front_Tof { front_tof: front }
+        Front_Tof { front_tof: front, pin: GpioPins.FRONT_TOF_XSHUT }
     }
 
     pub fn read_distance(&mut self) -> Result<Distance, String> {
